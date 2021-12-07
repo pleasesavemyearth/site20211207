@@ -1,0 +1,22 @@
+/* vertical */
+.icon-bar { /*가장 외부의 division*/
+    width: 90px;
+    background-color: rgb(80, 80, 80);
+}
+
+.icon-bar a { /*a태그에 대하여, icon에 대하여 ㄴㄴ*/
+    display: block; /*왜 나란히 아래?*/
+    text-align: center; /*중앙 정렬*/
+    padding: 16px;
+    transition: all 0.3s ease; /*hover줬을 때 부드럽게 나타남*/
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover { /*a:hover 띄어쓰기 ㄴㄴ, 커서댔을대 hover효과*/
+    background-color: black;
+}
+
+.active {
+    background-color: rgb(0, 145, 0);
+}  
