@@ -1,13 +1,15 @@
-/* vertical */
 .icon-bar { /*가장 외부의 division*/
-    width: 90px;
+    width: 100%;
     background-color: rgb(80, 80, 80);
+    overflow: auto;
 }
 
 .icon-bar a { /*a태그에 대하여, icon에 대하여 ㄴㄴ*/
-    display: block; /*왜 나란히 아래?*/
+    float: left;
+    /*display: block; /* verticla에서 왜 나란히 아래?*/
     text-align: center; /*중앙 정렬*/
-    padding: 16px;
+    width: 20%;
+    padding: 12px 0;
     transition: all 0.3s ease; /*hover줬을 때 부드럽게 나타남*/
     color: white;
     font-size: 36px;

@@ -1,0 +1,22 @@
+.accordion {
+    background-color: rgb(241, 241, 241); /*버튼 색상*/
+    color: rgb(68, 68, 68); /*글씨 색상*/
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none; /*테두리 사라짐*/
+    outline: none;  /*테두리 바깥의 선인데 해야 하나?*/
+    transition: 0.4s; /*hover시 부드럽게*/
+}
+
+.active, accordion:hover { /*hover는 붙여쓰기 / active는 왜넣어? 클릭하고있는 동안 버튼 색상이 변하지 않음, active빼면 그냥 hover라서 바로 변했다 돌아옴, js에서 active설정*/
+    background-color: gainsboro;
+}
+
+.panel {
+    padding: 0 18px; /*상하 좌우*/
+    background-color: white;
+    display: none; /*accordion 기본적으로 숨겨져있다*/
+    overflow: hidden; 
+}
