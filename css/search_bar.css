@@ -1,0 +1,31 @@
+.topnav {
+    overflow: hidden;
+    background-color: rgb(238, 238, 238);
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    /* text-align: center; */
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active { /*a태그의 active클래스*/
+    background-color: skyblue;
+    color: white;
+}
+
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top
+}

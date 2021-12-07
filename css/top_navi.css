@@ -1,0 +1,55 @@
+.topnav {
+    background-color: rgb(82, 82, 82);
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; /*a태그의 밑줄 없앰*/
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+.topnav a.active { /*topnav디비전클래스의 a태그의 active클래스 / 항상 색갈*/
+    background-color: yellowgreen;
+    color: white; 
+}
+
+.topnav .icon { /*작은 화면에서 탑내비를 열고 닫는 링크 숨김 아이콘 숨김 즉, 커진 화면에선 아이콘사라짐*/
+    display: none;
+}
+
+/*화면이 600px보다 작을 때(600포함), 첫번 째 것 home을 제외한 모든 링크를 숨긴다
+열고 닫아야 하는 탑네비 링크를 표시한다 */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;} /*첫번째 a태그를 제외한 나머지 a태그의 display를 없앤다*/
+    .topnav a.icon { /*bar icon에 대해*/
+      float: right;
+      display: block;
+    }
+  }
+  
+  /*반응형 클래스는 사용자가 icon을 클릭할 때, js를 이용해 탑내비에 추가한다
+  이 클래스는 탑네비를 작은 화면에서 보기 좋게 만든다(링크들을 수평이 아닌 수직으로 표현) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .topnav.responsive a { /*????*/
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/top_navi.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--반응형 상단 네비
+        작은화면엔 상단 네비 접혀있다가 icon 누르면 주르륵 나오는거
+        topnav로 큰 외부로 묶고 a태그로 하나하나 준다-->
+
+    <div class="topnav" id="myTopnav"> <!--js에서 getElementById주려고 id사용-->
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <script src="/js/top_navi.js"></script> <!--script계속 오타나서...-->
+</body>
+</html>
