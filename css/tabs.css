@@ -1,0 +1,30 @@
+.tab {
+    overflow: hidden; /*이걸 해야 밑에 content들이 안올라오고 안먹힌다 왜?*/
+    border: 1px solid #ccc; /*테두리*/
+    background-color: rgb(238, 238, 238);
+}
+
+.tab button {
+    background-color: inherit; /*inherit: 부모 요소의 속성값을 상속받는다, 즉 tab의 배경색상을 받아온다*/
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active { /*js*/
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none; /*js를 통해 누르면 나오게 한다 일단 숨겨져있음*/
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none; /*각 tabcontent class마다 선이 생겨 겹쳐서 굵어지니까.*/
+}
