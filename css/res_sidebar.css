@@ -1,0 +1,49 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed; /*고정하면 content는 위로 올라와서 겹친다*/
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color: coral;
+    color: white;
+}
+
+.sidebar a:hover:not(.active) { /*a태그의 active클래스를 제외한 나머지 a태그에 hover를 적용해라 */
+    background-color: #555;
+    color: white;
+}
+
+div.content { /* div 빼도 되는거 아닌가? */
+    margin-left: 200px;
+    padding: 1px 16px; /*상하 좌우*/
+    height: 1000px;
+}
+
+@media screen and (max-width: 700px) { /*width가 700이하일 때 사이드바 위로올림*/
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative; /*relative 먹히지 않음?*/
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) { /*width가 400이하일 때 사이드바 위로올리고 버티칼함*/
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
